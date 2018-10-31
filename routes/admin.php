@@ -10,4 +10,5 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Contracts\Routing\Registrar as RouteRegisterContract;
 
 // 登录
-Route::any('/login', \app\Admin\Controllers\LoginController::class.'@login');
+//Route::any('/login', \app\Admin\Controllers\LoginController::class.'@login');
+Route::any('/login', LoginController::class.'@login');

@@ -16,9 +16,10 @@ use App\Admin\Requests\ValidateLoginRequest;
 class LoginController extends Controller
 {
     // 登录
-    public function login(Request $request, Users $users, ValidateLoginRequest $validateLoginRequest){
-        $columns = Schema::getColumnListing($users);
-        dd($columns);
+    public function login(Request $request, Users $users/*, ValidateLoginRequest $validateLoginRequest*/){
+        $columns = Schema::getColumnListing('users');
+
+        return view('admin.login');
 
     }
 }
