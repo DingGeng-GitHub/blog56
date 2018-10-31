@@ -7,8 +7,7 @@
  */
 namespace App\Admin\Controllers;
 
-use View;
-use App;
+
 use App\Admin\Models\Users;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Schema;
@@ -19,10 +18,21 @@ class LoginController extends Controller
 {
 
     // 登录
-    public function login(Request $request, Users $users, ValidateLoginRegisterRequest $ValidateLoginRegisterRequest){
+    public function login(Request $request, Users $users/*, ValidateLoginRegisterRequest $ValidateLoginRegisterRequest*/){
 
-        $columns = Schema::getColumnListing('users');
-        return view('admin.login');
+
+
+    }
+
+    // 注册
+    public function register(Request $request, Users $users, ValidateLoginRegisterRequest $ValidateLoginRegisterRequest){
+
+        // 接收参数
+        $users->name = $request->post('name');
+        $users->phone = $request->post('phone');
+        $users->email = $request->post('email');
+        $users->password = $request->post('password');
+        $users->remember = $request->post('remember');
 
     }
 }
