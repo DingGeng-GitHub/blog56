@@ -11,18 +11,18 @@
     {{--<img src="{{URL::asset('static/images/portrait.jpg')}}" />--}}
     <title>Document</title>
 </head>
-<body style="background-image: url('{{URL::asset('static/images/portrait.jpg')}}')">
+<body style="background-image: url('{{URL::asset('static/images/portrait.jpg')}}'); background-repeat:no-repeat;">
     <div class="container-fluid">
         <div style="height: 300px; width: 400px; position:absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; border: 1px solid #AEC0C1; border-radius: 10px;">
             <!-- 选项卡菜单-->
-            <ul id="myTab" class="nav nav-tabs" role="tablist">
+            <ul id="myTab" class="nav nav-tabs" role="tablist" >
                 <li class="active"><a href="#bulletin" role="tab" data-toggle="tab">登录</a></li>
                 <li><a href="#rule" role="tab" data-toggle="tab">注册</a></li>
             </ul>
             <!-- 选项卡面板 -->
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane active" id="bulletin">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" style="margin-top: 20px">
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label">账号</label>
                             <div class="col-sm-10">

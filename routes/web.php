@@ -17,3 +17,7 @@ Route::get('/', function () {
 });
 
 //Route::get('/admin/login', LoginController::class.'@test');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
